@@ -6,6 +6,10 @@ module.exports = {
     config.output.libraryTarget = "umd";
     config.output.chunkLoadingGlobal = `webpackJsonp_${name}`;
     config.output.globalObject = "window";
+
+    // 配置可以省略的文件后缀
+    config.resolve.extensions = [".tsx", ".ts", ".js", ".jsx", ".json"];
+
     return config;
   },
   devServer: (_) => {

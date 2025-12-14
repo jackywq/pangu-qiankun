@@ -73,7 +73,7 @@ const AppMenu = () => {
   const getSelectedKeys = () => {
     if (location.pathname.startsWith('/react')) return ['/react'];
     if (location.pathname.startsWith('/vue')) return ['/vue'];
-    return [location.pathname] || ['/'];
+    return [location.pathname];
   };
 
   return (
