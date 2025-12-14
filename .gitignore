@@ -11,6 +11,8 @@ lerna-debug.log*
 node_modules/
 .pnp
 .pnp.js
+node_modules/.modules.yaml
+node_modules/.pnpm/lock.yaml
 
 # Build outputs
 dist/
@@ -57,9 +59,10 @@ Thumbs.db
 ehthumbs.db
 
 # Workspace
-pnpm-workspace.yaml
 
 # Sub-apps build outputs
 apps/**/dist/
 apps/**/build/
 apps/**/node_modules/
+**/node_modules/**
+node_modules/
