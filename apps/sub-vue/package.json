@@ -1,0 +1,19 @@
+{
+  "name": "sub-vue",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vue-tsc && vite build"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "ant-design-vue": "^4.0.0",
+    "vite-plugin-qiankun": "1.0.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}

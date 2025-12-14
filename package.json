@@ -1,0 +1,23 @@
+{
+  "name": "micro-enterprise-demo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "install:all": "pnpm install",
+    "start": "pnpm -r --parallel run start",
+    "build": "pnpm -r run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "undici": "^5.28.4"
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.1.0"
+  }
+}
