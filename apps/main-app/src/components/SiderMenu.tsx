@@ -1,11 +1,30 @@
 import React, { useState } from "react";
-import { Layout } from "antd";
-import AppMenu from "./AppMenu";
+import { Layout, Menu } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
+import {
+  BarChartOutlined,
+  DesktopOutlined,
+  FileTextOutlined,
+  PieChartOutlined,
+} from "@ant-design/icons";
 
 const { Sider } = Layout;
 
 const SiderMenu: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleMenuClick = (e: any) => {
+    navigate(e.key);
+  };
+
+  const getSelectedKeys = () => {
+    if (location.pathname.startsWith("/react")) return ["/react"];
+    if (location.pathname.startsWith("/vue")) return ["/vue"];
+    return [location.pathname];
+  };
 
   return (
     <Sider
@@ -30,7 +49,19 @@ const SiderMenu: React.FC = () => {
           盘古软件
         </div>
       </div>
-      <AppMenu />
+
+      <Menu
+        theme="dark"
+        selectedKeys={getSelectedKeys()}
+        mode="inline"
+        onClick={handleMenuClick}
+        items={[
+          { key: "/", icon: <PieChartOutlined />, label: "首页" },
+          { key: "/project", icon: <FileTextOutlined />, label: "项目管理" },
+          { key: "/react", icon: <BarChartOutlined />, label: "项目与任务" },
+          { key: "/vue", icon: <DesktopOutlined />, label: "数据分析" },
+        ]}
+      />
     </Sider>
   );
 };
