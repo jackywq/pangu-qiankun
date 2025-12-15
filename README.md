@@ -74,7 +74,7 @@ pnpm start
 ```
 
 启动后，应用将在以下端口运行：
-- 主应用：http://localhost:3000
+- 主应用：http://localhost:8888
 - React 子应用：http://localhost:10000
 - Vue 子应用：http://localhost:20000
 
