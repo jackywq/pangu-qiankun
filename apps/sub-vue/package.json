@@ -6,9 +6,12 @@
     "build": "vue-tsc && vite build"
   },
   "dependencies": {
-    "vue": "^3.3.4",
+    "@ant-design/icons-vue": "^7.0.1",
     "ant-design-vue": "^4.0.0",
-    "vite-plugin-qiankun": "1.0.14"
+    "echarts": "^6.0.0",
+    "vite-plugin-qiankun": "1.0.14",
+    "vue": "^3.3.4",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

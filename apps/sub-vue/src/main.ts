@@ -9,9 +9,11 @@ let app: any;
 
 function render(props: any = {}) {
   const { container } = props;
+  const target = container ? container.querySelector('#app') : '#app';
+
   app = createApp(App);
   app.use(Antd);
-  app.mount(container ? container.querySelector('#app') : '#app');
+  app.mount(target);
 }
 
 renderWithQiankun({
